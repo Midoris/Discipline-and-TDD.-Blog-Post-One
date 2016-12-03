@@ -56,8 +56,8 @@ class ToDoItemTests: XCTestCase {
 
     func testWhenTimestampDiffers_ShouldBeNotEqual() {
         let firstItem = ToDoItem(title: "First title", itemDescription: "First description", timestamp: 0.0)
-        let secontItem = ToDoItem(title: "First title", itemDescription: "First description", timestamp: 1.0)
-        XCTAssertNotEqual(firstItem, secontItem)
+        let secondItem = ToDoItem(title: "First title", itemDescription: "First description", timestamp: 1.0)
+        XCTAssertNotEqual(firstItem, secondItem)
     }
 
 
