@@ -28,7 +28,7 @@ class ToDoItemTests: XCTestCase {
 
     func testInit_ShouldSetTitleWithAnyString() {
         let item = ToDoItem(title: "Different test title")
-        XCTAssertEqual(item.title, "Different test title", "Initialiser should set the any title")
+        XCTAssertEqual(item.title, "Different test title", "Initialiser should set any title")
     }
 
     func testInit_ShouldSetTitleAndDescription() {
