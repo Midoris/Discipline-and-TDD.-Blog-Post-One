@@ -8,11 +8,12 @@
 
 import Foundation
 
-struct ToDoItem: Equatable {
+struct ToDoItem : Equatable {
 
     let title: String
     let itemDescription: String?
     let timestamp: Double?
+
 
     init(title: String, itemDescription: String? = nil, timestamp: Double? = nil) {
         self.title = title

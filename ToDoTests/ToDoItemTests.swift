@@ -26,14 +26,39 @@ class ToDoItemTests: XCTestCase {
         XCTAssertEqual(item.title, "Test title", "Initialiser should set the item title")
     }
 
+    func testInit_ShouldSetTitleWithAnyString() {
+        let item = ToDoItem(title: "Different test title")
+        XCTAssertEqual(item.title, "Different test title", "Initialiser should set the any title")
+    }
+
     func testInit_ShouldSetTitleAndDescription() {
         let item = ToDoItem(title: "Test title", itemDescription: "Test description")
         XCTAssertEqual(item.itemDescription, "Test description", "Initialiser should set the item description")
     }
 
+    func testInit_ShouldSetDescriptionWithAnyString() {
+        let item = ToDoItem(title: "Test title", itemDescription: "Different test description")
+        XCTAssertEqual(item.itemDescription, "Different test description", "Initialiser should set any description")
+    }
+
+    func testInit_ShouldSetDescriptionToNil() {
+        let item = ToDoItem(title: "Test title", itemDescription: nil)
+        XCTAssertEqual(item.itemDescription, nil, "Initialiser should set the item description to nil")
+    }
+
     func testInit_ShouldSetTitleAndDescriptionAndTimestamp() {
         let item = ToDoItem(title: "Test title", itemDescription: "Test description", timestamp: 0.0)
         XCTAssertEqual(item.timestamp, 0.0, "Initialiser should set the timestamp")
+    }
+
+    func testInit_ShouldSetTimestampToAnyValue() {
+        let item = ToDoItem(title: "Test title", itemDescription: "Test description", timestamp: 2.0)
+        XCTAssertEqual(item.timestamp, 2.0, "Initialiser should set any timestamp")
+    }
+
+    func testInit_ShouldSetTimestampTonNil() {
+        let item = ToDoItem(title: "Test title", itemDescription: "Test description", timestamp: nil)
+        XCTAssertEqual(item.timestamp, nil, "Initialiser should set the timestamp to nil")
     }
 
     func testEqualItems_ShouldBeEqual() {
